@@ -1,0 +1,8 @@
+en:
+  site_settings:
+    zipto_home_button_title: "What's the button's name"
+    zipto_home_button_description: "What's the button's description?"
+    zipto_home_button_url: "Enter the homepage you want button to redirect you to"
+    zipto_irc_button_title: "What's the button's name"
+    zipto_irc_button_description: "What's the button's description?"
+    zipto_irc_resource_hook_url: "Add a link to the site from which you will be fetching messages"

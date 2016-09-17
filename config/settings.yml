@@ -1,0 +1,16 @@
+plugins:
+  zipto_home_button_url:
+    default: "https://discourse.org"
+    client: true
+  zipto_home_button_title:
+    default: "Title goes here"
+    client: true
+  zipto_home_button_description:
+    default: "Enter description of your button"
+    client: true
+  zipto_irc_button_title:
+    default: "Title goes here"
+    client: true
+  zipto_irc_resource_hook_url:
+    default: "https://example.com"
+    client: true
