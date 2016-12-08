@@ -6,3 +6,4 @@ pl:
     zipto_irc_button_title: "Podaj nazwę przycisku"
     zipto_irc_button_description: "Podaj opis przycisku (wyświetli się po najechaniu)"
     zipto_irc_resource_hook_url: "Podaj link z którego mają być pobierane newsy"
+    zipto_irc_queue_key: "Pozwala twojemu botowi na przetwarzanie wiadomosci w kolejce, BARDZO ważne by nie zostawić domyślnych ustawień"

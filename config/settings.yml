@@ -14,3 +14,6 @@ plugins:
   zipto_irc_resource_hook_url:
     default: "https://example.com"
     client: true
+  zipto_irc_queue_key:
+    default: "CHANGEME"
+    client: true
