@@ -25,7 +25,7 @@ after_initialize do
       status['status']='invalid_entry'
       render json: status.to_json and return unless params[:message]
       message = sanitize(params[:message])
-      queue.push("#{user}-#{message}")
+      queue.push("#{user} - #{message}")
       status['status']='success'
       PluginStore.set("irc_queue", 0, queue)
       render json: status.to_json
