@@ -16,8 +16,8 @@ after_initialize do
   class ZiptoIrcBot::ZiptoIrcController < ::ApplicationController
     skip_before_action :verify_authenticity_token #kinda necessary since we will play with external services
 
-    def addToQueue
-      status = {'status'=>'unauthorized'}
+    def addToQueue #adds a message to the queue
+      status = {'status'=>'unauthorized'} #default status
       queue = setQueue
       render json: status.to_json and return unless current_user
       user = current_user.username
@@ -31,7 +31,7 @@ after_initialize do
       render json: status.to_json
     end
 
-    def popFromQueue
+    def popFromQueue #pops one from queue
       jsonResponse = {'permission'=>'false'}
       queue = setQueue
       key = SiteSetting.zipto_irc_queue_key
@@ -49,7 +49,7 @@ after_initialize do
       return
     end
 
-    def setQueue
+    def setQueue #if queue doesnt exist yet - create it
       queue = PluginStore.get("irc_queue", 0)
       if queue
       else
@@ -94,7 +94,7 @@ after_initialize do
 
     private
     def sanitize(string)
-      new_string = string.gsub(/[<>\\\/]/, '*')
+      new_string = string.gsub(/[<>\\]/, '*')
       return new_string
     end
   end

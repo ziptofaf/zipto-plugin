@@ -5,14 +5,11 @@ export default {
     const TopicFooterButtonsComponent = container.lookupFactory('component:topic-footer-buttons');
 
     TopicFooterButtonsComponent.reopen({
-      customButtonLabel: siteSettings.zipto_home_button_title,
-      customButtonTitle: siteSettings.zipto_home_button_description,
       actions: {
         clickButton() {
-          window.open(siteSettings.zipto_home_button_url, '_blank');
+          window.open(siteSettings.zipto_home_button_url, '_self');
         }
       }
     });
-
   }
 }
